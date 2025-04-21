@@ -8,7 +8,7 @@ function App() {
 
   const trackASINs = async () => {
     const asinArray = asins.split(",").map((a) => a.trim());
-    const response = await axios.post("http://localhost:8000/track_asin", {
+    const response = await axios.post("https://backend-t3p0.onrender.com/track_asin", {
       asins: asinArray,
     });
     setData(response.data.tracked);
